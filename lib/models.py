@@ -92,6 +92,7 @@ class Customer(Base):
         
         session.commit() # Commit the changes to the database session
          
+         
     def __repr__(self):
         return f'Customer (id={self.id}),' +\
             f'name = {self.first_name},' +\
