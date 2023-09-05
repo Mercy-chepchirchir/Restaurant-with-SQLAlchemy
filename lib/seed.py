@@ -47,6 +47,7 @@ if __name__ == '__main__':
         customers.append(customer)
         
         
+        
     reviews = []
     for restaurant in restaurants:
         for item in range(random.randint(1,5)):
