@@ -74,6 +74,7 @@ class Customer(Base):
     
    #should allow the customer to add a new review of a restaurant given a restaurant's id
     def customer_add_review(self, restaurant, rating):
+        
         #create a new review by using the Review class attributes 
         review = Review(
         star_rating = rating, 
