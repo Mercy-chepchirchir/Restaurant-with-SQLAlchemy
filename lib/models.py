@@ -34,6 +34,7 @@ class Restaurant(Base):
     def restaurant_customers(self):
         return self.customers 
     
+    
     #This method returns one restaurant instance with the highest price
     @classmethod
     def restaurant_fanciest(cls, session):
@@ -60,6 +61,7 @@ class Customer(Base):
     
     restaurants = relationship('Restaurant', secondary = restaurant_customer, back_populates = 'customers')
     reviews = relationship('Review', backref = backref('customer'), cascade = 'all, delete-orphan')
+    
     
     #return a collection of reviews left by a customer 
     def customer_reviews(self):
